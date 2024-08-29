@@ -42,7 +42,11 @@ namespace ScreenshotCapturer
 					{
 						CopyScreenToImageFile(screenshotsTakenSoFarCount);
 						screenshotsTakenSoFarCount++;
-						if (screenshotsTakenSoFarCount >= ScreenshotsToTakeMax)
+						if
+						(
+							ScreenshotsToTakeMax > 0
+							&& screenshotsTakenSoFarCount >= ScreenshotsToTakeMax
+						)
 						{
 							userWishesToQuit = true;
 						}
